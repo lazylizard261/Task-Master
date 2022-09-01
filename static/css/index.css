@@ -1,0 +1,43 @@
+/* Colors Variables*/
+:root {
+    --color_primary: #8338EC;
+    --color_secondary: #3A86FF;
+    --color_orange: #FB5607;
+    --color_pink: #FF006E;
+    --color_yellow: #FFBE0B;
+    --color_white: #ffffff;
+    --color_black: #2C272E;
+    --color_shadow: #2C272E;
+}
+
+
+
+body {
+    background: linear-gradient (to right, var(--color_orange), var(--color_primary));
+
+}
+
+.content {
+    width: 50%;
+    margin: auto auto;
+}
+
+h1 {
+    color: var(--color_pink);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--color_pink);
+    border-radius: 20px;
+    border-style: none;
+    transition: scale 2s;
+}
+
+button:hover {
+    background-color: var(--color_orange);
+    cursor: pointer;
+    box-shadow: 5px 5px 20px 2px var(--color_shadow);
+    padding: 12px 22px;
+
+}
