@@ -1,5 +1,4 @@
 
-from asyncio import Task
 
 from datetime import datetime
 from flask import request
@@ -26,7 +25,7 @@ def __repr__(self):
 
 
 @app.route("/", methods=['GET','POST'])
-def hello_world():
+def index():
     tasks = Todo.query.order_by(Todo.date_created).all()
     if request.method == 'POST':
         task_content = request.form['content']

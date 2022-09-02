@@ -7,14 +7,18 @@
 
 {% block body %}
 
-<div class="content">
-    <h1>Task Master</h1>
-    <p class="error">{{err}}</p>
+<div class=" container text-center ">
+
+    <h1 class="text-center">Task Master</h1>
+    <p class="error" id="error">{{err}}</p>
     <form action="/" method="post">
-        <input type="text" name="content" id="content">
-        <input type="submit" name="submit" id="submit">
+        <input class="col-6" type="text" name="content" id="content">
+
+        <input type="submit" name="submit" id="submit" class="btn btn-secondary" disabled>
+
     </form>
-    <table>
+    <br>
+    <table class="table">
         <tr>
             <th>Task</th>
             <th>Added</th>
@@ -24,8 +28,8 @@
         <tr>
             <td>{{task.content}}</td>
             <td>{{task.date_created.date()}}</td>
-            <td><a href="/update/{{task.id}}">Edit</a><br>
-                <a href="/delete/{{task.id}}">Delete</a>
+            <td><a href="/update/{{task.id}}" class="btn btn-primary">Edit</a>
+                <a href="/delete/{{task.id}}" class="btn btn-danger">Delete</a>
             </td>
         </tr>
         {% endfor %}
@@ -34,5 +38,8 @@
 
 
 </div>
+<script>
 
+
+</script>
 {% endblock %}
